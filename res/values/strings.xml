@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Image Search</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="QueryHint">Enter Search Query</string>
+    <string name="title_activity_image_display">ImageDisplayActivity</string>
+    <string name="title_activity_settings_menu">SettingsMenuActivity</string>
+    <string name="webUrl">www.yahoo.com</string>
+    <string name="btnSubmitMenuOptions">submit</string>
+
+</resources>
