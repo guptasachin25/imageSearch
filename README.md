@@ -11,13 +11,13 @@ Time Spent: 10 Hours
 
 4. Size (small, medium, large, extra-large)
 
-4.1 Color filter (black, blue, brown, gray, green, etc...)	
+	* Color filter (black, blue, brown, gray, green, etc...)	
 
-4.2 Type (faces, photo, clip art, line art)
+	* Type (faces, photo, clip art, line art)
 
-4.3 Site (espn.com)
+	* Site (espn.com)
 
-4.4 Subsequent searches will have any filters applied to the search results
+	* Subsequent searches will have any filters applied to the search results
 
 5. User can tap on any image in results to see the image full-screen
 
