@@ -23,3 +23,13 @@ Time Spent: 10 Hours
 
 6. User can scroll down “infinitely” to continue loading more image results (up to 8 pages)
 
+**Optional Stories**
+1. Internet Check 
+
+2. Action Bar SearchView
+
+3. Experimented with Extra Images   
+
+![App Gif](gifs/PandaSearch.gif)
+
+
