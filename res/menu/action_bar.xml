@@ -5,6 +5,12 @@
         android:icon="@drawable/settings_icon_white"
         android:showAsAction="always"
         android:onClick="onClickSettings"
-        android:title="Settings">
-    </item>
+        android:title="Settings" />
+    
+    <item android:id="@+id/action_search"
+          android:orderInCategory="5"
+          android:title="Search"
+          android:icon="@drawable/action_bar_search"
+          android:showAsAction="ifRoom|collapseActionView"
+          android:actionViewClass="android.widget.SearchView" />
 </menu>

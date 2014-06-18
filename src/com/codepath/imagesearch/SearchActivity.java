@@ -24,6 +24,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.SearchView;
+import android.widget.SearchView.OnQueryTextListener;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
@@ -45,8 +47,9 @@ public class SearchActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
 		setViews();
-		setUpUserSettings();
 
+		// Editing user settings
+		setUpUserSettings();
 		if (userSettings != null) {
 			Toast.makeText(this, userSettings.toString(), Toast.LENGTH_LONG)
 					.show();
@@ -55,7 +58,6 @@ public class SearchActivity extends Activity {
 		arrayAdapter = new ImageViewArrayAdapter(this, imageResults);
 		gvResults.setAdapter(arrayAdapter);
 		gvResults.setOnItemClickListener(new OnItemClickListener() {
-
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -98,6 +100,10 @@ public class SearchActivity extends Activity {
 
 	public void onSearch(View v) {
 		String query = etQuery.getText().toString();
+		if (query.trim().equals("")) {
+			return;
+		}
+
 		String toastString = String.format("Searching for %s", query);
 		Toast.makeText(this, toastString, Toast.LENGTH_LONG).show();
 		imageResults.clear();
@@ -170,7 +176,35 @@ public class SearchActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.action_bar, menu);
-		return true;
+		MenuItem searchItem = menu.findItem(R.id.action_search);
+		SearchView searchView = (SearchView) searchItem.getActionView();
+		searchView.setOnQueryTextListener(new QueryTextListener());
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	public class QueryTextListener implements OnQueryTextListener {
+		@Override
+		public boolean onQueryTextSubmit(String newQuery) {
+			// perform query here
+			if (newQuery.trim().equals("")) {
+				return true;
+			}
+
+			String toastString = String.format("Searching for %s", newQuery);
+			Toast.makeText(getApplicationContext(), toastString,
+					Toast.LENGTH_LONG).show();
+			imageResults.clear();
+			arrayAdapter.clear();
+			query = newQuery;
+			etQuery.setText(query);
+			runQuery(query, 0);
+			return true;
+		}
+
+		@Override
+		public boolean onQueryTextChange(String newText) {
+			return false;
+		}
 	}
 
 	public void onClickSettings(MenuItem mi) {

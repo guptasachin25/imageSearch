@@ -10,18 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/btnSearch"
+        android:layout_alignBottom="@+id/btnSearch"
         android:ems="10"
         android:hint="@string/QueryHint" />
-
-    <ImageButton
-        android:id="@+id/btnSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/etQuery"
-        android:onClick="onSearch"
-        android:src="@drawable/search_icon" />
 
     <GridView
         android:id="@+id/gvResults"
@@ -31,5 +23,15 @@
         android:layout_below="@+id/btnSearch"
         android:numColumns="3" >
     </GridView>
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:onClick="onSearch"
+        android:src="@drawable/main_search_icon" />
 
 </RelativeLayout>

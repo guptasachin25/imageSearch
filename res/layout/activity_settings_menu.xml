@@ -4,26 +4,62 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}" >
 
+    <TextView
+        android:id="@+id/tvImageSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spImageSize"
+        android:layout_alignTop="@+id/spImageSize"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/spImageSize"
+        android:text="Select Image Size" />
+    
+    <TextView
+        android:id="@+id/tvImageType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spImageType"
+        android:layout_alignTop="@+id/spImageType"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/spImageType"
+        android:text="Select Image Type" />
+    
+        <TextView
+            android:id="@+id/tvImageColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spImageColor"
+            android:layout_alignTop="@+id/spImageColor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/spImageColor"
+            android:text="Select Image Color" />
+    
     <Spinner
         android:id="@+id/spImageSize"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" />
 
     <Spinner
         android:id="@+id/spImageType"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/spImageSize"
         android:layout_marginTop="16dp" />
 
     <Spinner
         android:id="@+id/spImageColor"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/spImageType"
         android:layout_marginTop="16dp" />
 
@@ -49,5 +85,6 @@
         android:layout_marginTop="32dp"
         android:onClick="onSubmitMenuOptions"
         android:text="@string/btnSubmitMenuOptions" />
+
 
 </RelativeLayout>

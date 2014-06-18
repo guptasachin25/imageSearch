@@ -32,21 +32,18 @@ public class SettingsMenuActivity extends Activity {
 
 		ArrayAdapter<String> colorAdapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, imageColors);
-		spImageColor.setAdapter(colorAdapter);
 		colorAdapter
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spImageColor.setAdapter(colorAdapter);
 
 		ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, imageTypes);
-		spImageType.setAdapter(typeAdapter);
 		typeAdapter
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spImageColor.setAdapter(typeAdapter);
+		spImageType.setAdapter(typeAdapter);
 
 		ArrayAdapter<String> sizeAdapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, imageSizes);
-		spImageSize.setAdapter(sizeAdapter);
 		sizeAdapter
 				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spImageSize.setAdapter(sizeAdapter);
